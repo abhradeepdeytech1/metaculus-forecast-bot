@@ -1,0 +1,4 @@
+# Optional research SDK, same series as the public template. Core and tests use stdlib.
+asknews==0.13.11
+# Official SDK. API calls disable built-in retries and use a finite timeout.
+anthropic>=0.79.0,<1

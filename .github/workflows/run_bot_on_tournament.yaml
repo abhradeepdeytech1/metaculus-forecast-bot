@@ -1,0 +1,75 @@
+﻿name: Forecast on new tournament questions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7,27,47 * * * *"
+
+# A single writer protects the persisted caps and duplicate-question ledger.
+concurrency:
+  group: metaculus-bot-ledger
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out bot code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          path: code
+          persist-credentials: true
+
+      - name: Check out persistent state
+        uses: actions/checkout@v4
+        with:
+          ref: bot-state
+          path: state
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        working-directory: code
+        run: python -m pip install -r requirements.txt
+
+      - name: Run bot
+        working-directory: code
+        run: python main.py --mode tournament
+        env:
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ASKNEWS_CLIENT_ID: ${{ secrets.ASKNEWS_CLIENT_ID }}
+          ASKNEWS_SECRET: ${{ secrets.ASKNEWS_SECRET }}
+          ASKNEWS_API_KEY: ${{ secrets.ASKNEWS_API_KEY }}
+          FORECAST_MODELS: ${{ vars.FORECAST_MODELS || 'claude-sonnet-5-5,claude-opus-5-5' }}
+          SAMPLES_PER_MODEL: ${{ vars.SAMPLES_PER_MODEL }}
+          MODEL_SAMPLE_COUNTS: ${{ vars.MODEL_SAMPLE_COUNTS }}
+          MAX_OUTPUT_TOKENS: ${{ vars.MAX_OUTPUT_TOKENS || '4096' }}
+          MONTHLY_BUDGET_USD: ${{ vars.MONTHLY_BUDGET_USD || '200' }}
+          ANTHROPIC_PRICES_JSON: ${{ vars.ANTHROPIC_PRICES_JSON || '' }}
+          ASKNEWS_REQUEST_COST_USD: ${{ vars.ASKNEWS_REQUEST_COST_USD || '0' }}
+          PROBABILITY_FLOOR: ${{ vars.PROBABILITY_FLOOR || '0.02' }}
+          BOT_STATE_DIR: ${{ github.workspace }}/state
+          BOT_STATE_REMOTE: origin
+          BOT_STATE_BRANCH: bot-state
+          TOURNAMENT_IDS: ${{ vars.TOURNAMENT_IDS || 'fall-futureeval-2026,minibench' }}
+          QUESTION_BUDGET_USD: ${{ vars.QUESTION_BUDGET_USD || '1' }}
+          DAILY_BUDGET_USD: ${{ vars.DAILY_BUDGET_USD || '10' }}
+
+
+
+
+
+
+
+

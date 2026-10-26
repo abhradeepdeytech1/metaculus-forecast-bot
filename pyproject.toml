@@ -1,0 +1,8 @@
+[project]
+name = "futureeval-autonomous-bot"
+version = "0.1.0"
+description = "Durable, budgeted ensemble forecaster for FutureEval"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 120
