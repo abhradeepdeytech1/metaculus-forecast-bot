@@ -1,1 +1,10 @@
-{"version":1,"questions":{},"calls":{}}
+{
+  "calls": {},
+  "questions": {
+    "live:46430": {
+      "day": "2026-10-26",
+      "status": "claimed"
+    }
+  },
+  "version": 1
+}
