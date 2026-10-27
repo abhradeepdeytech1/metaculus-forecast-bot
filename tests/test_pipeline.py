@@ -244,6 +244,16 @@ class OfflineFixture(unittest.TestCase):
         self.assertIn("https://example.org/fixture", news.research("live:111", Question.from_post(post())))
         self.assertEqual(self.ledger.spent(), 2000)
 
+    def test_news_failure_falls_back_to_question_context(self):
+        from types import SimpleNamespace
+        from futureeval.method import Question
+        for side_effect in (RuntimeError("credit exhausted"), [SimpleNamespace(as_dicts=[])] * 2):
+            sdk = Mock()
+            sdk.news.search_news.side_effect = side_effect
+            news = AskNews(self.config, self.ledger, client=sdk)
+            research = json.loads(news.research("live:111", Question.from_post(post())))
+            self.assertIn("unavailable", research["notice"])
+
     def test_missing_ledger_is_not_silently_reset(self):
         with self.assertRaises(StateError):
             Ledger(self.folder / "missing")

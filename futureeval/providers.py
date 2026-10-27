@@ -179,6 +179,21 @@ class AskNews:
         self.client = client
 
     def research(self, key, question):
+        # A missed question scores worse than one forecast without news, so AskNews
+        # failures (outage, exhausted credit, no results) fall back to question context.
+        # Budget and state errors still propagate.
+        try:
+            selected = self._search(key, question)
+        except RemoteError:
+            selected = None
+        if selected is None:
+            logging.getLogger(__name__).warning("question_id=%s asknews_unavailable fallback=question_context", question.id)
+            return json.dumps({"notice": "Live news search was unavailable for this question. Use only the supplied question "
+                                         "background and your prior knowledge. Recent developments may be missing. "
+                                         "Do not invent sources or imply you checked current news."})
+        return selected
+
+    def _search(self, key, question):
         reports, seen = [], set()
         for strategy, count in (("latest news", 6), ("news knowledge", 10)):
             call = self.ledger.reserve(key, self.config.news_cost * self.request_multiplier, self.config, "asknews:" + strategy)
@@ -198,7 +213,7 @@ class AskNews:
                                 "date": str(getattr(article, "pub_date", "")), "url": url,
                                 "summary": str(getattr(article, "summary", ""))[:1000]})
         if not reports:
-            raise ValueError("Research found no usable sources; question skipped")
+            return None
         # Enough room for dated citations, with a predictable input cost.
         selected = []
         for report in reports:
