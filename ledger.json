@@ -154,6 +154,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "bd3ce237e0184a5fa6a03ce072be92e1": {
+      "charged": 186715,
+      "day": "2026-10-29",
+      "days": [
+        "2026-10-29",
+        "2026-10-30"
+      ],
+      "kind": "anthropic:claude-opus-5-5",
+      "question": "live:46512",
+      "reserved": 186715,
+      "status": "pending"
+    },
     "dad320f9f78b48f2aadee9054a11236e": {
       "charged": 6169,
       "day": "2026-10-29",
