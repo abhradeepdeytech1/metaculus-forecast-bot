@@ -1,5 +1,17 @@
 {
   "calls": {
+    "04189edc8cb84e00993f8387717c99e6": {
+      "charged": 93443,
+      "day": "2026-10-30",
+      "days": [
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "kind": "anthropic:claude-sonnet-5-5",
+      "question": "live:46514",
+      "reserved": 93443,
+      "status": "pending"
+    },
     "043b002ed3b245daa39ed4471f119cc0": {
       "charged": 8713,
       "day": "2026-10-27",
