@@ -406,6 +406,18 @@
       "question": "live:46430",
       "reserved": 60095,
       "status": "known"
+    },
+    "fb00189f79674e39af9a2dec03342a2f": {
+      "charged": 0,
+      "day": "2026-10-31",
+      "days": [
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46518",
+      "reserved": 0,
+      "status": "pending"
     }
   },
   "questions": {
