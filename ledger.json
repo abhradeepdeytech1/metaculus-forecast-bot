@@ -66,6 +66,18 @@
       "reserved": 182145,
       "status": "known"
     },
+    "107cfdb1b4c744c1aeee63c7370dcd17": {
+      "charged": 93553,
+      "day": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02"
+      ],
+      "kind": "anthropic:claude-sonnet-5-5",
+      "question": "live:46523",
+      "reserved": 93553,
+      "status": "pending"
+    },
     "18016b12d7b742e0a71f7b647228f54e": {
       "charged": 8348,
       "day": "2026-10-29",
