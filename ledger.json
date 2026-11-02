@@ -2200,6 +2200,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "d87dafa54e274c96b8a4974d063ef799": {
+      "charged": 0,
+      "day": "2026-11-02",
+      "days": [
+        "2026-11-02",
+        "2026-11-03"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46642",
+      "reserved": 0,
+      "status": "pending"
+    },
     "d8b5abc3fb864a069a0d693ce874f8a4": {
       "charged": 0,
       "day": "2026-11-02",
