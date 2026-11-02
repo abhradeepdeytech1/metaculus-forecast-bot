@@ -862,13 +862,12 @@
       "charged": 0,
       "day": "2026-11-02",
       "days": [
-        "2026-11-02",
-        "2026-11-03"
+        "2026-11-02"
       ],
       "kind": "asknews:latest news",
       "question": "live:46611",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "d8b5abc3fb864a069a0d693ce874f8a4": {
       "charged": 0,
