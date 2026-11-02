@@ -928,13 +928,12 @@
       "charged": 0,
       "day": "2026-11-02",
       "days": [
-        "2026-11-02",
-        "2026-11-03"
+        "2026-11-02"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46644",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "571142078a3a470bb474c727e6aed57f": {
       "charged": 47921,
