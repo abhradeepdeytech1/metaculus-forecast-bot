@@ -785,6 +785,10 @@
     "live:46523": {
       "day": "2026-11-01",
       "status": "submitted"
+    },
+    "live:46601": {
+      "day": "2026-11-02",
+      "status": "claimed"
     }
   },
   "version": 1
