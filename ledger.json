@@ -653,13 +653,12 @@
       "charged": 0,
       "day": "2026-11-02",
       "days": [
-        "2026-11-02",
-        "2026-11-03"
+        "2026-11-02"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46623",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "500d25051e6c49fd8ea6a81e7474e969": {
       "charged": 5641,
