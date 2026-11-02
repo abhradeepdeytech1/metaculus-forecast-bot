@@ -275,6 +275,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "3d62c2af14154504bbfa5b97d02b97cf": {
+      "charged": 0,
+      "day": "2026-11-02",
+      "days": [
+        "2026-11-02",
+        "2026-11-03"
+      ],
+      "kind": "asknews:latest news",
+      "question": "live:46612",
+      "reserved": 0,
+      "status": "pending"
+    },
     "3effe97136a844b685035aeb3cab8fa2": {
       "charged": 5082,
       "day": "2026-10-27",
