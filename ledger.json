@@ -1489,13 +1489,12 @@
       "charged": 0,
       "day": "2026-11-03",
       "days": [
-        "2026-11-03",
-        "2026-11-04"
+        "2026-11-03"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46646",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "881f802916b44234b19596b323f4d9f0": {
       "charged": 4222,
