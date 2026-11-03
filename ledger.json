@@ -1,5 +1,17 @@
 {
   "calls": {
+    "013981a65bad41caa55e9067da76b74b": {
+      "charged": 201450,
+      "day": "2026-11-03",
+      "days": [
+        "2026-11-03",
+        "2026-11-04"
+      ],
+      "kind": "anthropic:claude-opus-5-5",
+      "question": "live:46650",
+      "reserved": 201450,
+      "status": "pending"
+    },
     "033fb3478f674028b5873f8d0b0984b5": {
       "charged": 47331,
       "day": "2026-11-02",
