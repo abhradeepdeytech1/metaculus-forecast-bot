@@ -342,16 +342,15 @@
       "status": "known"
     },
     "17752fe4a0f24763bd43acc671e6aa2e": {
-      "charged": 208695,
+      "charged": 10216,
       "day": "2026-11-03",
       "days": [
-        "2026-11-03",
-        "2026-11-04"
+        "2026-11-03"
       ],
       "kind": "anthropic:claude-opus-5-5",
       "question": "live:46646",
       "reserved": 208695,
-      "status": "pending"
+      "status": "known"
     },
     "18016b12d7b742e0a71f7b647228f54e": {
       "charged": 8348,
