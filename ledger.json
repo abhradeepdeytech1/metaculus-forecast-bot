@@ -774,13 +774,12 @@
       "charged": 0,
       "day": "2026-11-03",
       "days": [
-        "2026-11-03",
-        "2026-11-04"
+        "2026-11-03"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46655",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "3773d74355fe44adb17b0dbafa12030d": {
       "charged": 6697,
