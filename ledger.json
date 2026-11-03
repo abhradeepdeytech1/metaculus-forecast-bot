@@ -2101,6 +2101,18 @@
       "reserved": 104203,
       "status": "known"
     },
+    "976bb88963634c4eb96498af4e83bd93": {
+      "charged": 0,
+      "day": "2026-11-03",
+      "days": [
+        "2026-11-03",
+        "2026-11-04"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46657",
+      "reserved": 0,
+      "status": "pending"
+    },
     "97d6225da8e14fd29c6fb24f2f6e25d5": {
       "charged": 6010,
       "day": "2026-11-02",
