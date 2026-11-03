@@ -906,13 +906,12 @@
       "charged": 0,
       "day": "2026-11-03",
       "days": [
-        "2026-11-03",
-        "2026-11-04"
+        "2026-11-03"
       ],
       "kind": "asknews:latest news",
       "question": "live:46655",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "42fa1c24e1ab427a98b5a234dda18fdc": {
       "charged": 21836,
