@@ -2013,6 +2013,18 @@
       "reserved": 200100,
       "status": "known"
     },
+    "8512c33fd3e046b88d0ea6df3b25ed31": {
+      "charged": 93593,
+      "day": "2026-11-04",
+      "days": [
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "kind": "anthropic:claude-sonnet-5-5",
+      "question": "live:46570",
+      "reserved": 93593,
+      "status": "pending"
+    },
     "8577981e1c6f49b58b31f415f061935c": {
       "charged": 24011,
       "day": "2026-11-02",
