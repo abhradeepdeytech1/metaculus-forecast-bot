@@ -1508,16 +1508,15 @@
       "status": "known"
     },
     "5d6ba6cb35be46d8a0ffc3c7b0e5cb8c": {
-      "charged": 193510,
+      "charged": 47271,
       "day": "2026-11-04",
       "days": [
-        "2026-11-04",
-        "2026-11-05"
+        "2026-11-04"
       ],
       "kind": "anthropic:claude-opus-5-5",
       "question": "live:46552",
       "reserved": 193510,
-      "status": "pending"
+      "status": "known"
     },
     "5d89a5ce37ed43ee90ff21e8d56e5000": {
       "charged": 5756,
