@@ -70,6 +70,11 @@ def main():
         try:
             ledger.check_budget(None, 1, config)
             if not resolved:
+                # Each run lists every open post. Skip finished questions before the
+                # detail request so repeated runs stay under Metaculus rate limits.
+                listed = post.get("question")
+                if isinstance(listed, dict) and "id" in listed and not ledger.claimable(f"live:{listed['id']}"):
+                    continue
                 # List responses can omit fields. Forecast from the full detail response.
                 post = api.get_post(post["id"])
             completed += bool(run_question(post, resolved=resolved, config=config, ledger=ledger, api=api, router=router, news=news))
@@ -78,8 +83,9 @@ def main():
             break
         except (StateError, RemoteError):
             raise
-        except (ValueError, KeyError, TypeError):
-            logging.warning("Skipped unsupported or ineligible post_id=%s", post.get("id"))
+        except (ValueError, KeyError, TypeError) as error:
+            logging.warning("Skipped unsupported or ineligible post_id=%s reason=%s: %s",
+                            post.get("id"), type(error).__name__, str(error)[:120])
     logging.info("completed=%s utc_day_accounted_usd=%.6f utc_month_accounted_usd=%.6f effective_daily_cap_usd=%.6f",
                  completed, ledger.spent(day=ledger.day()) / 1_000_000,
                  ledger.spent(month=ledger.day()[:7]) / 1_000_000, ledger.effective_daily_cap(config) / 1_000_000)
@@ -93,5 +99,8 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as error:
-        logging.error("Bot stopped category=%s; check configuration or state without inspecting live forecasts", type(error).__name__)
+        # State and remote errors carry fixed messages (git step or HTTP status), safe to log.
+        detail = f" detail={error}" if isinstance(error, (StateError, RemoteError)) else ""
+        logging.error("Bot stopped category=%s%s; check configuration or state without inspecting live forecasts",
+                      type(error).__name__, detail)
         raise SystemExit(1) from None

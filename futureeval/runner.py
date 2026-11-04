@@ -53,7 +53,9 @@ def run_question(post, *, resolved, config, ledger, api, router, news):
         raise
     except Exception as error:
         # Never log response text, live forecasts, research, prompts, or exception strings.
-        ledger.mark(key, "failed_or_uncertain")
+        # Only a failure after the write began leaves the submission uncertain.
+        started = ledger.data["questions"][key]["status"] == "submission_started"
+        ledger.mark(key, "failed_or_uncertain" if started else "failed_before_submit")
         log.warning("question_id=%s stopped category=%s", q.id, type(error).__name__)
         return False
     finally:

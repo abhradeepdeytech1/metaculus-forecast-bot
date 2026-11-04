@@ -31,7 +31,7 @@ class GitStateTests(unittest.TestCase):
             self.assertTrue(ledger.claim("live:1"))
             ledger.reserve("live:1", 1000, Config(), "fixture")
             git("-C", stale, "pull", "--ff-only")
-            restored = Ledger(stale, publish=git_publisher(stale))
+            restored = Ledger(stale, publish=git_publisher(stale, sleep=lambda seconds: None))
             self.assertFalse(restored.claim("live:1"))
             self.assertEqual(restored.spent(), 1000)
             ledger.claim("live:2")

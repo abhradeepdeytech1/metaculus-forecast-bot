@@ -2,10 +2,20 @@
 from datetime import date, datetime, timedelta, timezone
 import calendar
 import json
+import logging
 import os
 from pathlib import Path
 import subprocess
+import time
 import uuid
+
+log = logging.getLogger(__name__)
+
+# These outcomes guarantee that no forecast was sent, so a later run may try again.
+# A claim older than the 20-minute job timeout belongs to a run that died.
+RETRYABLE = {"claimed", "budget_exhausted", "changed_or_closed", "failed_before_submit"}
+STALE_CLAIM = timedelta(minutes=30)
+MAX_ATTEMPTS = 3
 
 
 class BudgetExceeded(RuntimeError):
@@ -63,10 +73,24 @@ class Ledger:
             self.poisoned = True
             raise StateError("Durable state update failed; external operations stopped") from None
 
-    def claim(self, key):
-        if key in self.data["questions"]:
+    def claimable(self, key):
+        entry = self.data["questions"].get(key)
+        if entry is None:
+            return True
+        if entry["status"] not in RETRYABLE or entry.get("attempts", 1) >= MAX_ATTEMPTS:
             return False
-        self.data["questions"][key] = {"status": "claimed", "day": self.day()}
+        if entry["status"] == "claimed" and "at" in entry:
+            # The workflow's concurrency group already prevents overlapping runs; the age check is a second guard.
+            return datetime.now(timezone.utc) - datetime.fromisoformat(entry["at"]) > STALE_CLAIM
+        return True
+
+    def claim(self, key):
+        if not self.claimable(key):
+            return False
+        entry = self.data["questions"].get(key)
+        attempts = 1 if entry is None else entry.get("attempts", 1) + 1
+        self.data["questions"][key] = {"status": "claimed", "day": self.day(), "attempts": attempts,
+                                       "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         self.save()
         return True
 
@@ -132,14 +156,26 @@ class Ledger:
         self.save()
 
 
-def git_publisher(folder, branch="bot-state", remote="origin"):
+def git_publisher(folder, branch="bot-state", remote="origin", sleep=time.sleep):
     folder = Path(folder).resolve()
 
-    def git(*args):
-        result = subprocess.run(["git", "-C", str(folder), *args], capture_output=True, text=True, timeout=45)
-        if result.returncode:
-            raise StateError("State git operation failed")
-        return result.stdout.strip()
+    def git(*args, attempts=1):
+        for attempt in range(attempts):
+            try:
+                result = subprocess.run(["git", "-C", str(folder), *args], capture_output=True, text=True, timeout=45)
+            except subprocess.TimeoutExpired:
+                detail = "timeout"
+            else:
+                if not result.returncode:
+                    return result.stdout.strip()
+                # Git errors name refs and hosts only; the ledger holds no forecasts.
+                lines = [line.strip() for line in result.stderr.splitlines()
+                         if line.strip() and not line.startswith(("hint:", "To "))]
+                detail = " | ".join(lines)[-300:] or "no stderr"
+            log.warning("state_git_failed op=%s attempt=%s detail=%s", args[0], attempt + 1, detail)
+            if attempt + 1 < attempts:
+                sleep(5 * 3 ** attempt)
+        raise StateError(f"State git {args[0]} failed")
 
     if git("branch", "--show-current") != branch:
         raise StateError("State checkout is on the wrong branch")
@@ -149,5 +185,7 @@ def git_publisher(folder, branch="bot-state", remote="origin"):
         git("-c", "user.name=forecast-bot", "-c", "user.email=forecast-bot@users.noreply.github.com",
             "commit", "--allow-empty", "-m", "Record autonomous operation")
         # A non-fast-forward push fails closed. Never force or merge competing ledgers.
-        git("push", remote, f"HEAD:refs/heads/{branch}")
+        # Repeating the same push is safe: it either lands, finds the commit already
+        # there, or is rejected again because another writer moved the branch.
+        git("push", remote, f"HEAD:refs/heads/{branch}", attempts=4)
     return publish
