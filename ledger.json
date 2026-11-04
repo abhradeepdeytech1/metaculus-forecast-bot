@@ -2996,13 +2996,12 @@
       "charged": 0,
       "day": "2026-11-04",
       "days": [
-        "2026-11-04",
-        "2026-11-05"
+        "2026-11-04"
       ],
       "kind": "asknews:latest news",
       "question": "live:46504",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "d2f336bd4a7546a080cfc9b853465e5c": {
       "charged": 48036,
