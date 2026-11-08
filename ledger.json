@@ -2864,13 +2864,12 @@
       "charged": 0,
       "day": "2026-11-08",
       "days": [
-        "2026-11-08",
-        "2026-11-09"
+        "2026-11-08"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46663",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "ad5ffbeacafe452c924e680f77d3cfa6": {
       "charged": 51381,
