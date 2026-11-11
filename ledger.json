@@ -3261,13 +3261,12 @@
       "charged": 0,
       "day": "2026-11-11",
       "days": [
-        "2026-11-11",
-        "2026-11-12"
+        "2026-11-11"
       ],
       "kind": "asknews:latest news",
       "question": "live:46721",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "b484f531bcd14a8c81698b2f1cc59871": {
       "charged": 5370,
