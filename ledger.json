@@ -4881,6 +4881,12 @@
     "live:46706": {
       "day": "2026-11-08",
       "status": "submitted"
+    },
+    "live:46721": {
+      "at": "2026-11-11T21:37:13+00:00",
+      "attempts": 1,
+      "day": "2026-11-11",
+      "status": "claimed"
     }
   },
   "version": 1
