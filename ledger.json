@@ -851,13 +851,12 @@
       "charged": 0,
       "day": "2026-11-11",
       "days": [
-        "2026-11-11",
-        "2026-11-12"
+        "2026-11-11"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46721",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "2bf70488dda14c60a7df2578d836374a": {
       "charged": 22521,
