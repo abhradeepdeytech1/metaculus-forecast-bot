@@ -4640,6 +4640,12 @@
       "day": "2026-11-10",
       "status": "submitted"
     },
+    "live:46587": {
+      "at": "2026-11-11T07:14:15+00:00",
+      "attempts": 1,
+      "day": "2026-11-11",
+      "status": "claimed"
+    },
     "live:46601": {
       "day": "2026-11-02",
       "status": "submitted"
