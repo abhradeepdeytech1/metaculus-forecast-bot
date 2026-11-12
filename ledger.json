@@ -1952,13 +1952,12 @@
       "charged": 0,
       "day": "2026-11-12",
       "days": [
-        "2026-11-12",
-        "2026-11-13"
+        "2026-11-12"
       ],
       "kind": "asknews:latest news",
       "question": "live:46723",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "693ac2701b704ff3bea546e9070fee5a": {
       "charged": 6599,
