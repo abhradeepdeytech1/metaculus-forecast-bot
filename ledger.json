@@ -4053,13 +4053,12 @@
       "charged": 0,
       "day": "2026-11-12",
       "days": [
-        "2026-11-12",
-        "2026-11-13"
+        "2026-11-12"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46722",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "df41517d6ea446adbe6e3ac646d36c4c": {
       "charged": 0,
