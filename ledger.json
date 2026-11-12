@@ -1948,6 +1948,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "676b0989dc0f47a99fa0a454add898cf": {
+      "charged": 0,
+      "day": "2026-11-12",
+      "days": [
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "kind": "asknews:latest news",
+      "question": "live:46723",
+      "reserved": 0,
+      "status": "pending"
+    },
     "693ac2701b704ff3bea546e9070fee5a": {
       "charged": 6599,
       "day": "2026-11-02",
