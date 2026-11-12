@@ -4501,16 +4501,15 @@
       "status": "known"
     },
     "efe889b0054d4875bf7c08bb33a66d16": {
-      "charged": 92870,
+      "charged": 6034,
       "day": "2026-11-12",
       "days": [
-        "2026-11-12",
-        "2026-11-13"
+        "2026-11-12"
       ],
       "kind": "anthropic:claude-sonnet-5-5",
       "question": "live:46722",
       "reserved": 92870,
-      "status": "pending"
+      "status": "known"
     },
     "f0a78020566a46c0a82859df128e87e2": {
       "charged": 21656,
