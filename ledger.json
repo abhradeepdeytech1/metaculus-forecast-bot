@@ -3294,13 +3294,12 @@
       "charged": 0,
       "day": "2026-11-13",
       "days": [
-        "2026-11-13",
-        "2026-11-14"
+        "2026-11-13"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46727",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "ae01b769a2c44442949d7ebcd5266ddd": {
       "charged": 0,
