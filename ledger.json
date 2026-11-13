@@ -5257,6 +5257,12 @@
       "attempts": 1,
       "day": "2026-11-13",
       "status": "submitted"
+    },
+    "live:46728": {
+      "at": "2026-11-13T21:49:47+00:00",
+      "attempts": 1,
+      "day": "2026-11-13",
+      "status": "claimed"
     }
   },
   "version": 1
