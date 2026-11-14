@@ -587,13 +587,12 @@
       "charged": 0,
       "day": "2026-11-14",
       "days": [
-        "2026-11-14",
-        "2026-11-15"
+        "2026-11-14"
       ],
       "kind": "asknews:latest news",
       "question": "live:46730",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "1a41fb5067934327af8ced4ad7cce42e": {
       "charged": 8274,
