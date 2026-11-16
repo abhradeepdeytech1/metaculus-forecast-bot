@@ -3114,6 +3114,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "7871dbb03d3640d990806bd34625a885": {
+      "charged": 0,
+      "day": "2026-11-16",
+      "days": [
+        "2026-11-16",
+        "2026-11-17"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46853",
+      "reserved": 0,
+      "status": "pending"
+    },
     "7a40b4a0d8594dadb71a7bb63bba39d6": {
       "charged": 5493,
       "day": "2026-11-08",
