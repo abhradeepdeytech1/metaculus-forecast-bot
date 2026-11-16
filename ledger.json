@@ -3184,13 +3184,12 @@
       "charged": 0,
       "day": "2026-11-16",
       "days": [
-        "2026-11-16",
-        "2026-11-17"
+        "2026-11-16"
       ],
       "kind": "asknews:latest news",
       "question": "live:46837",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "87d3f4bf10924149a7d961dc15b3cde2": {
       "charged": 11437,
