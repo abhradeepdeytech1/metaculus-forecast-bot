@@ -5248,6 +5248,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "e995f5cadf64497f8407cc5b107c9c2e": {
+      "charged": 0,
+      "day": "2026-11-16",
+      "days": [
+        "2026-11-16",
+        "2026-11-17"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46824",
+      "reserved": 0,
+      "status": "pending"
+    },
     "e9b6e1df934e4bb38743705407b1a86d": {
       "charged": 6103,
       "day": "2026-11-01",
