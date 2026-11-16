@@ -5791,13 +5791,12 @@
       "charged": 0,
       "day": "2026-11-16",
       "days": [
-        "2026-11-16",
-        "2026-11-17"
+        "2026-11-16"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46827",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "ff3bdf1ae4c145f1a0f134f0ec6fa217": {
       "charged": 15451,
