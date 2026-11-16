@@ -5230,13 +5230,12 @@
       "charged": 0,
       "day": "2026-11-16",
       "days": [
-        "2026-11-16",
-        "2026-11-17"
+        "2026-11-16"
       ],
       "kind": "asknews:latest news",
       "question": "live:46842",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "d75a8bab7ff04a1a890da257c62bbe2a": {
       "charged": 12491,
