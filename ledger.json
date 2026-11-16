@@ -6855,6 +6855,12 @@
       "attempts": 1,
       "day": "2026-11-16",
       "status": "submitted"
+    },
+    "live:46848": {
+      "at": "2026-11-16T15:33:27+00:00",
+      "attempts": 1,
+      "day": "2026-11-16",
+      "status": "claimed"
     }
   },
   "version": 1
