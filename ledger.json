@@ -2887,13 +2887,12 @@
       "charged": 0,
       "day": "2026-11-16",
       "days": [
-        "2026-11-16",
-        "2026-11-17"
+        "2026-11-16"
       ],
       "kind": "asknews:latest news",
       "question": "live:46836",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "7ef4a47d137b46618637fdc48faeb55c": {
       "charged": 17189,
