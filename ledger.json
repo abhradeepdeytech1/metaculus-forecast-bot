@@ -4919,16 +4919,15 @@
       "status": "ceiling"
     },
     "b07fb520592a487192d98162374f46d7": {
-      "charged": 100365,
+      "charged": 6485,
       "day": "2026-11-16",
       "days": [
-        "2026-11-16",
-        "2026-11-17"
+        "2026-11-16"
       ],
       "kind": "anthropic:claude-sonnet-5-5",
       "question": "live:46858",
       "reserved": 100365,
-      "status": "pending"
+      "status": "known"
     },
     "b2b38e3d291f4b89b41b5c183cf9dfef": {
       "charged": 0,
