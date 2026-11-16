@@ -1177,6 +1177,18 @@
       "reserved": 95128,
       "status": "known"
     },
+    "284f4647a8dd42cdbc63db09faa23c75": {
+      "charged": 0,
+      "day": "2026-11-16",
+      "days": [
+        "2026-11-16",
+        "2026-11-17"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46855",
+      "reserved": 0,
+      "status": "pending"
+    },
     "2852fe951b9e4247a684f18b747c760f": {
       "charged": 49156,
       "day": "2026-11-02",
