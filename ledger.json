@@ -5226,6 +5226,18 @@
       "reserved": 104973,
       "status": "known"
     },
+    "d6f12a339eca4ddea3f630019c2a551d": {
+      "charged": 0,
+      "day": "2026-11-16",
+      "days": [
+        "2026-11-16",
+        "2026-11-17"
+      ],
+      "kind": "asknews:latest news",
+      "question": "live:46842",
+      "reserved": 0,
+      "status": "pending"
+    },
     "d75a8bab7ff04a1a890da257c62bbe2a": {
       "charged": 12491,
       "day": "2026-10-31",
