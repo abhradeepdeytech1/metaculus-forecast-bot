@@ -7795,6 +7795,12 @@
       "attempts": 1,
       "day": "2026-11-16",
       "status": "submitted"
+    },
+    "live:46862": {
+      "at": "2026-11-17T01:56:53+00:00",
+      "attempts": 1,
+      "day": "2026-11-17",
+      "status": "claimed"
     }
   },
   "version": 1
