@@ -6374,13 +6374,12 @@
       "charged": 0,
       "day": "2026-11-17",
       "days": [
-        "2026-11-17",
-        "2026-11-18"
+        "2026-11-17"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46862",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "deca7bf9ff1a48a580eb893efd8c6c33": {
       "charged": 40761,
