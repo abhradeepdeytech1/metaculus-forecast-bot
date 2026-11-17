@@ -8171,6 +8171,12 @@
       "attempts": 1,
       "day": "2026-11-17",
       "status": "submitted"
+    },
+    "live:46867": {
+      "at": "2026-11-17T07:18:54+00:00",
+      "attempts": 1,
+      "day": "2026-11-17",
+      "status": "claimed"
     }
   },
   "version": 1
