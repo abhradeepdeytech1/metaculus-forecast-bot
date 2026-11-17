@@ -8077,6 +8077,12 @@
       "attempts": 1,
       "day": "2026-11-17",
       "status": "submitted"
+    },
+    "live:46866": {
+      "at": "2026-11-17T06:01:56+00:00",
+      "attempts": 1,
+      "day": "2026-11-17",
+      "status": "claimed"
     }
   },
   "version": 1
