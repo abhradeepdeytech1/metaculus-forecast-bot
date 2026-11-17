@@ -4215,16 +4215,15 @@
       "status": "known"
     },
     "85a45456abb84563bc9913267b49c245": {
-      "charged": 103515,
+      "charged": 4691,
       "day": "2026-11-17",
       "days": [
-        "2026-11-17",
-        "2026-11-18"
+        "2026-11-17"
       ],
       "kind": "anthropic:claude-sonnet-5-5",
       "question": "live:46875",
       "reserved": 103515,
-      "status": "pending"
+      "status": "known"
     },
     "85eddfe458f84c82b7ce0192d7dda8dc": {
       "charged": 55231,
