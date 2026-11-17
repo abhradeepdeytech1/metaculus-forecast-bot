@@ -3415,13 +3415,12 @@
       "charged": 0,
       "day": "2026-11-17",
       "days": [
-        "2026-11-17",
-        "2026-11-18"
+        "2026-11-17"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46869",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "6f5ef68cd2d542edbe3bdcf43d161ea4": {
       "charged": 47896,
