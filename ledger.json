@@ -2512,13 +2512,12 @@
       "charged": 0,
       "day": "2026-11-17",
       "days": [
-        "2026-11-17",
-        "2026-11-18"
+        "2026-11-17"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46865",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "535e6000066445cca0609d1ddb11c35c": {
       "charged": 42421,
