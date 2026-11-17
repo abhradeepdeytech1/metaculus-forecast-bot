@@ -6370,6 +6370,18 @@
       "reserved": 0,
       "status": "ceiling"
     },
+    "de6b1b6662fb4874a29da0d127e629ce": {
+      "charged": 0,
+      "day": "2026-11-17",
+      "days": [
+        "2026-11-17",
+        "2026-11-18"
+      ],
+      "kind": "asknews:news knowledge",
+      "question": "live:46862",
+      "reserved": 0,
+      "status": "pending"
+    },
     "deca7bf9ff1a48a580eb893efd8c6c33": {
       "charged": 40761,
       "day": "2026-11-14",
