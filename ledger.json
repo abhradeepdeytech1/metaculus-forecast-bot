@@ -7782,13 +7782,12 @@
       "charged": 0,
       "day": "2026-11-18",
       "days": [
-        "2026-11-18",
-        "2026-11-19"
+        "2026-11-18"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46879",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "ec8dcfd9010c4457b3b541050bae7818": {
       "charged": 5466,
