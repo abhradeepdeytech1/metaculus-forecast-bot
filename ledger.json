@@ -5912,13 +5912,12 @@
       "charged": 0,
       "day": "2026-11-18",
       "days": [
-        "2026-11-18",
-        "2026-11-19"
+        "2026-11-18"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46877",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "ba1fbfe988814898a632562131cc5698": {
       "charged": 5929,
