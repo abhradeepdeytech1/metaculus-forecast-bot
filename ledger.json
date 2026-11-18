@@ -5249,16 +5249,15 @@
       "status": "ceiling"
     },
     "a2868d3c1e854dbf96a63c5476c2977a": {
-      "charged": 184690,
+      "charged": 8243,
       "day": "2026-11-18",
       "days": [
-        "2026-11-18",
-        "2026-11-19"
+        "2026-11-18"
       ],
       "kind": "anthropic:claude-opus-5-5",
       "question": "live:46737",
       "reserved": 184690,
-      "status": "pending"
+      "status": "known"
     },
     "a2bd5eb88a6541b99c4ebc398a2dbfa3": {
       "charged": 12040,
