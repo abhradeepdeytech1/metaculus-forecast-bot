@@ -9017,6 +9017,12 @@
       "attempts": 1,
       "day": "2026-11-18",
       "status": "submitted"
+    },
+    "live:46883": {
+      "at": "2026-11-20T03:55:32+00:00",
+      "attempts": 1,
+      "day": "2026-11-20",
+      "status": "claimed"
     }
   },
   "version": 1
