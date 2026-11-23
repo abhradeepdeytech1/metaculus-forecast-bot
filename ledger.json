@@ -8508,13 +8508,12 @@
       "charged": 0,
       "day": "2026-11-23",
       "days": [
-        "2026-11-23",
-        "2026-11-24"
+        "2026-11-23"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46888",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "fcdfd63f970f404ab51b129f5a10eeb5": {
       "charged": 5616,
