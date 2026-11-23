@@ -9204,7 +9204,7 @@
       "at": "2026-11-23T00:07:25+00:00",
       "attempts": 1,
       "day": "2026-11-23",
-      "status": "claimed"
+      "status": "submission_started"
     }
   },
   "version": 1
