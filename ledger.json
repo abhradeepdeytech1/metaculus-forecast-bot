@@ -5703,13 +5703,12 @@
       "charged": 0,
       "day": "2026-11-23",
       "days": [
-        "2026-11-23",
-        "2026-11-24"
+        "2026-11-23"
       ],
       "kind": "asknews:latest news",
       "question": "live:46888",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "ab61c658dc7e4c758a9c5d2a794e6584": {
       "charged": 25881,
