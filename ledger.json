@@ -9205,6 +9205,12 @@
       "attempts": 1,
       "day": "2026-11-23",
       "status": "submitted"
+    },
+    "live:46894": {
+      "at": "2026-11-24T18:13:44+00:00",
+      "attempts": 1,
+      "day": "2026-11-24",
+      "status": "claimed"
     }
   },
   "version": 1
