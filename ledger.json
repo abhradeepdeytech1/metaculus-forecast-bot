@@ -664,13 +664,12 @@
       "charged": 0,
       "day": "2026-11-24",
       "days": [
-        "2026-11-24",
-        "2026-11-25"
+        "2026-11-24"
       ],
       "kind": "asknews:latest news",
       "question": "live:46894",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "134633359fbf42859b32c2d220a46ef5": {
       "charged": 6328,
