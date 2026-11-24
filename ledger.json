@@ -9299,6 +9299,12 @@
       "attempts": 1,
       "day": "2026-11-24",
       "status": "submitted"
+    },
+    "live:46895": {
+      "at": "2026-11-24T21:39:52+00:00",
+      "attempts": 1,
+      "day": "2026-11-24",
+      "status": "claimed"
     }
   },
   "version": 1
