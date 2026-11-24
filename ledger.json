@@ -2611,13 +2611,12 @@
       "charged": 0,
       "day": "2026-11-24",
       "days": [
-        "2026-11-24",
-        "2026-11-25"
+        "2026-11-24"
       ],
       "kind": "asknews:news knowledge",
       "question": "live:46894",
       "reserved": 0,
-      "status": "pending"
+      "status": "ceiling"
     },
     "48cc98d209c24031ae267ecc76b4633d": {
       "charged": 0,
