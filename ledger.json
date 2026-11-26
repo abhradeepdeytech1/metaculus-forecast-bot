@@ -9393,6 +9393,12 @@
       "attempts": 1,
       "day": "2026-11-24",
       "status": "submitted"
+    },
+    "live:47011": {
+      "at": "2026-11-26T13:13:11+00:00",
+      "attempts": 1,
+      "day": "2026-11-26",
+      "status": "claimed"
     }
   },
   "version": 1
